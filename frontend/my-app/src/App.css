@@ -1,42 +1,168 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff7f50, #ff1493, #8a2be2);
+  /* Colorful Gradient Background */
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main container for the App */
+.App {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* White with slight transparency */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
+  margin: 0 auto;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header Styling */
+h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Booking Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Label */
+label {
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Form Inputs */
+input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+/* Input Focus Effect */
+input:focus {
+  border-color: #ff1493;
+  /* Pink focus color */
+}
+
+/* Submit Button */
+button {
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #ff7f50;
+  /* Coral Color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-top: 15px;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #ff6347;
+  /* Tomato Color */
+  transform: translateY(-2px);
+}
+
+/* Button Active Effect */
+button:active {
+  background-color: #e53d2f;
+  /* Darker Tomato */
+  transform: translateY(1px);
+}
+
+/* Responsive Styles */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+    width: 85%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  label,
+  input,
+  button {
+    font-size: 14px;
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .App {
+    padding: 15px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
   }
 }
 
-.card {
-  padding: 2em;
-}
+/* Larger Screens */
+@media (min-width: 1200px) {
+  .App {
+    width: 500px;
+  }
 
-.read-the-docs {
-  color: #888;
+  h1 {
+    font-size: 2.5rem;
+  }
 }
