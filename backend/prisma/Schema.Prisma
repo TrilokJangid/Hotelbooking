@@ -19,6 +19,7 @@ model User {
   familySize  Int
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  hotelBookings HotelBooking[] @relation("UserHotelBookings")
 }
 
 model HotelBooking {
@@ -26,5 +27,5 @@ model HotelBooking {
   userId        Int
   familySize    Int
   bookingDate   DateTime  @default(now())
-  user          User      @relation(fields: [userId], references: [id])
+  user          User      @relation("UserHotelBookings", fields: [userId], references: [id])
 }
